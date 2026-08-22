@@ -5,6 +5,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SupabaseModule } from './supabase/supabase.module';
 import { AuthModule } from './auth/auth.module';
+import { NegocioModule } from './negocio/negocio.module';
+import { EmpleadoModule } from './empleado/empleado.module';
+import { ServicioModule } from './servicio/servicio.module';
+import { DisponibilidadModule } from './disponibilidad/disponibilidad.module';
+import { CitaModule } from './cita/cita.module';
 
 @Module({
   imports: [
@@ -17,6 +22,11 @@ import { AuthModule } from './auth/auth.module';
     ]),
     SupabaseModule,
     AuthModule,
+    NegocioModule,
+    EmpleadoModule,
+    ServicioModule,
+    DisponibilidadModule,
+    CitaModule,
   ],
   controllers: [AppController],
   providers: [

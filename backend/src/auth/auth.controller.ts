@@ -3,6 +3,8 @@ import { Throttle } from '@nestjs/throttler';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
+import { RegistrarNegocioDto } from './dto/registrar-negocio.dto';
+import { LoginAdminDto } from './dto/login-admin.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -18,4 +20,14 @@ export class AuthController {
   login(@Body() dto: LoginDto) {
     return this.authService.login(dto);
   }
+
+  @Post('negocio/registro')
+  registrarNegocio(@Body() dto: RegistrarNegocioDto) {
+  return this.authService.registrarNegocio(dto);
+}
+
+  @Post('negocio/login')
+  loginAdmin(@Body() dto: LoginAdminDto) {
+  return this.authService.loginAdmin(dto);
+}
 }
