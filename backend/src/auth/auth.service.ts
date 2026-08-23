@@ -145,7 +145,7 @@ async loginAdmin(dto: LoginAdminDto) {
     const payload = {
       sub: cliente.id,
       celular: cliente.celular,
-      rol: 'cliente',
+      role: 'cliente',
     };
 
     const accessToken = await this.jwtService.signAsync(payload);
